@@ -221,4 +221,3 @@ if [ ! $1 ]    ;
  else
   grep $1 `which $0` ;
 fi
-#stage 07
