@@ -213,7 +213,7 @@ if [ ! $1 ]    ;
 	 gateway=`ip route show default | grep via | awk ' { print $3 } '`
 	 export gateway
 	 echo "Gateway is $gateway"
-	 echo gateway >> /etc/hosts
+	 #echo gateway >> /etc/hosts
  elif [ $1 == "backup" ] ; then
 	 cp /var/tmp/log /home/daniel/work/bkups/logs/`date +%s`
 	 cp /etc/squid/squid.conf $backups/squid/squid.conf-`date +%s`
@@ -221,3 +221,4 @@ if [ ! $1 ]    ;
  else
   grep $1 `which $0` ;
 fi
+#stag 10
